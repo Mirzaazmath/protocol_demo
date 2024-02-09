@@ -27,22 +27,14 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Rules to enter protocol
             const TextUtil(text: "Rules:"),
-            const TextUtil(text: "The UI is Render based on the value your enter.",size: 14,),
-            const TextUtil(text: "Only Number value should be Entered.",size: 14,),
-            const TextUtil(text: "MaxLength is 5",size: 14,),
-            const TextUtil(text: "Each value  have its own task in rendering UI",size: 14,),
-            const TextUtil(text: "Example:",size: 14,),
-            const TextUtil(text: "Index 1 for Tile Color.",size: 14,),
-            const TextUtil(text: "Index 2 for Text Color.",size: 14,),
-            const TextUtil(text: "Index 3 for Tile design",size: 14,),
-            const TextUtil(text: "Index 4 for Theme Color",size: 14,),
-            const TextUtil(text: "Index 5 for Animation",size: 14,),
-
-
-             const  Spacer(),
+            const TextUtil(text: "The UI is Render based on the value your enter.\nOnly Number value should be Entered.\nMaxLength is 5\nEach value  have its own task in rendering UI\nExample:\nIndex 1 for Tile Color.\nIndex 2 for Text Color.\nIndex 3 for Tile design\nIndex 4 for Theme Color\nIndex 5 for Animation",size: 14,length: 15,),
+            const  Spacer(),
+              // TextField
               FieldWidget(title: 'Please Enter Protocol',controller: _controller,),
             const SizedBox(height: 20,),
+            // Enter Button
             ColorBtn(title: 'Enter', onTap: () {
               if(_controller.text.isEmpty){
                 showToast();
@@ -56,31 +48,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
 
-
-
-
-
-
-
       ///////  Drawer //////////////
       drawer: Drawer(
-
-
         child: ListView(
-
           padding: EdgeInsets.zero,
           children: const [
              DrawerHeader(
-
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
               child: Text('Drawer Header'),
-            ),
-
-
-
-          ],
+            ),],
         ),
       ),
       /////// Bottom Navigation Bar //////////////
